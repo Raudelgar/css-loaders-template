@@ -1,0 +1,40 @@
+.loader1 {
+	position: relative;
+	width: auto;
+	height: 80px;
+	transform-origin: right bottom;
+	animation: rotate 6s linear infinite;
+}
+
+.circle {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: tomato;
+	border-radius: 100%;
+	animation: grow 1.5s linear infinite;
+	margin: -10px;
+}
+
+.loader1 > div:nth-child(2) {
+	background-color: violet;
+	animation-delay: 0.75s;
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes grow {
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
